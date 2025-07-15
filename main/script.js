@@ -10,7 +10,7 @@ const users = [
     name: ["eku", "egshiglen", "ekustein"],
     dob: "2009-04-18",
     password: "Ekubaba*123",
-    page: "../Eku/eku.html"
+    page: "eku/eku.html"
   },
 ];
 
