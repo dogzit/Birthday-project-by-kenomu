@@ -1,0 +1,18 @@
+.cool-button {
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #4facfe, #00f2fe); /* цэнхэр gradient */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px; /* бага зэрэг дугуй */
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 153, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cool-button:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 153, 255, 0.6);
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}

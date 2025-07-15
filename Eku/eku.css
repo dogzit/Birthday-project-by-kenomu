@@ -1,0 +1,47 @@
+body {
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a2c3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.eku-container {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(238, 156, 167, 0.4);
+  text-align: center;
+  max-width: 400px;
+}
+
+.cute-button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.5);
+  transition: all 0.3s ease;
+}
+
+.cute-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 182, 193, 0.6);
+  background: linear-gradient(135deg, #ff8fab, #ffc2d1);
+}
+.side-image {
+  width: 350px;   /* Өмнө нь 250px байсан */
+  height: 350px;  /* Шинээр өндөр өгсөн */
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(238, 156, 167, 0.6);
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}

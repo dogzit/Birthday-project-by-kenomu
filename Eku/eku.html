@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Birthday Page with Background</title>
+  <style>
+    body {
+      background-image: url('images/background.jpg'); /* Арын зурагны зам */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #4a2c3f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.85); /* Цагаан ба туяатай */
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(238, 156, 167, 0.4);
+      max-width: 600px;
+      width: 100%;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      backdrop-filter: blur(10px); /* Арын зургийг бага зэрэг бүдэгрүүлэх */
+      -webkit-backdrop-filter: blur(10px);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+      margin: 0;
+      padding: 0 10px;
+    }
+    .cute-button {
+      width: 90%;
+      max-width: 300px;
+      padding: 16px 0;
+      font-size: 20px;
+      background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      box-shadow: 0 4px 12px rgba(255, 182, 193, 0.7);
+      cursor: pointer;
+      user-select: none;
+      transition: all 0.3s ease;
+    }
+    .cute-button:hover {
+      background: linear-gradient(135deg, #ff8fab, #ffc2d1);
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(255, 182, 193, 0.8);
+    }
+    .cute-button:active {
+      transform: scale(0.98);
+    }
+    .image-wrapper {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 18px rgba(238, 156, 167, 0.6);
+    }
+    .image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      transition: opacity 0.5s ease;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday, Eku! 🎉🎂</h1>
+    <p>Hope you have an amazing day filled with joy and surprises!</p>
+    <button class="cute-button" id="wishBtn">Send Wishes</button>
+    <div class="image-wrapper">
+      <img id="wishImage" src="images/1.jpeg" alt="Birthday Image" />
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      'images/1.jpeg',
+      'images/2.jpeg',
+      'images/3.jpeg',
+      'images/4.jpeg',
+      'images/5.jpeg',
+      'images/6.jpeg',
+      'images/7.jpeg',
+      'images/8.jpeg',
+      'images/9.jpeg'
+    ];
+
+    let currentIndex = 0;
+    const wishBtn = document.getElementById('wishBtn');
+    const wishImage = document.getElementById('wishImage');
+
+    wishBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      wishImage.style.opacity = 0;
+      setTimeout(() => {
+        wishImage.src = images[currentIndex];
+        wishImage.style.opacity = 1;
+      }, 300);
+    });
+  </script>
+</body>
+</html>

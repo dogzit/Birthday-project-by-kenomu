@@ -6,19 +6,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   
   <div class="container">
     <h1>🎂 Happy Birthday Greeting Portal 🎉</h1>
     <input type="text" id="name" placeholder="Your Name">
     <input type="date" id="dob">
-    <button onclick="checkUser()">Next</button>
+    <button id="next-button" onclick="checkUser()">Next</button>
 
     <div id="passwordDiv" class="hidden">
       <input type="password" id="password" placeholder="Enter your secret password">
-      <button onclick="checkPassword()">Reveal Message</button>
+      <button id="enter-button" onclick="checkPassword()">Enter</button>
     </div>
 
     <div id="greeting" class="hidden"></div>
   </div>
+    
   <script src="script.js"></script>
 </body>
 </html>
