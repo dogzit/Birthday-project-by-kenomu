@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Zoloo!</title>
+  <link rel="stylesheet" href="zoloo.css" />
+</head>
+<body>
+  <!-- Sound effect -->
+  <audio id="switchSound" src="sounds/slide.mp3" preload="auto"></audio>
+
+  <div class="container">
+    <h1>Happy Birthday, Zoloo! 🎉🎂</h1>
+    <p>Wishing you strength, joy, and epic adventures ahead!</p>
+    <button class="cool-button" id="wishBtn">Next Photo</button>
+    <div class="image-wrapper">
+      <img id="wishImage" src="./images/main.jpg" alt="Birthday Image" />
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      'images/1.jpg',
+      'images/2.jpg',
+      'images/3.jpg'
+    ];
+
+    let currentIndex = 0;
+    const wishBtn = document.getElementById('wishBtn');
+    const wishImage = document.getElementById('wishImage');
+    const switchSound = document.getElementById('switchSound');
+
+    wishBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      wishImage.style.opacity = 0;
+
+      setTimeout(() => {
+        wishImage.src = images[currentIndex];
+        wishImage.style.opacity = 1;
+        switchSound.currentTime = 0;
+        switchSound.play();
+      }, 300);
+    });
+  </script>
+</body>
+</html>

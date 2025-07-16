@@ -1,10 +1,10 @@
 // Хэрэглэгчдийн мэдээлэл
 const users = [
   {
-    name: ["zoloo"],
+    name: ["zoloo", "kenomu", "zolbayar"],
     dob: "2009-07-10",
-    password: "happy16",
-    page: "zoloo.html"
+    password: "Kenomu*123",
+    page: "zoloo/zoloo.html"
   },
   {
     name: ["eku", "egshiglen", "ekustein"],

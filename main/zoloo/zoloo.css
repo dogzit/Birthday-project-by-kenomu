@@ -1,18 +1,92 @@
+/* Арын зураг */
+body {
+  background-image: url('./images/haha.jpg'); /* Төрсөн өдрийн background зураг */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Гол блок */
+.container {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  width: 100%;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Гарчиг ба тайлбар */
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+  color: #0f172a;
+}
+
+p {
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0;
+  padding: 0 10px;
+  color: #334155;
+}
+
+/* Товч */
 .cool-button {
-  padding: 12px 24px;
-  background: linear-gradient(135deg, #4facfe, #00f2fe); /* цэнхэр gradient */
-  color: white;
-  font-weight: bold;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #0f9bff, #006aff);
+  color: #fff;
+  font-weight: 600;
   border: none;
-  border-radius: 12px; /* бага зэрэг дугуй */
-  font-size: 16px;
-  box-shadow: 0 4px 12px rgba(0, 153, 255, 0.4);
+  border-radius: 14px;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 16px rgba(15, 155, 255, 0.4);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 .cool-button:hover {
+  background: linear-gradient(135deg, #008cff, #0057d9);
+  box-shadow: 0 8px 22px rgba(0, 102, 204, 0.6);
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 6px 16px rgba(0, 153, 255, 0.6);
-  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.cool-button:active {
+  transform: scale(0.97);
+}
+
+/* Зураг блок */
+.image-wrapper {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+  border-radius: 20px;
 }

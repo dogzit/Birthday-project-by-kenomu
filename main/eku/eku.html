@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Responsive Birthday Page with Background</title>
+  <title>Happy Birthday Eku!</title>
   <style>
     body {
-      background-image: url('images/background.jpg'); /* Арын зурагны зам */
+      background-image: url(./images/background.jpg);
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
 
+      /* background: linear-gradient(135deg, #ffdde1, #ee9ca7); */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #4a2c3f;
       display: flex;
@@ -22,27 +23,26 @@
       box-sizing: border-box;
     }
     .container {
-      background: rgba(255, 255, 255, 0.85); /* Цагаан ба туяатай */
+      background: rgba(255, 255, 255, 0.85);
+      padding: 30px 40px;
       border-radius: 20px;
       box-shadow: 0 8px 24px rgba(238, 156, 167, 0.4);
       max-width: 600px;
       width: 100%;
-      padding: 30px 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 20px;
-      backdrop-filter: blur(10px); /* Арын зургийг бага зэрэг бүдэгрүүлэх */
-      -webkit-backdrop-filter: blur(10px);
     }
     h1 {
       margin: 0;
       font-size: 2rem;
-      text-align: center;
     }
     p {
       font-size: 1.1rem;
-      text-align: center;
       margin: 0;
       padding: 0 10px;
     }
@@ -80,12 +80,15 @@
       height: auto;
       display: block;
       object-fit: cover;
-      transition: opacity 0.5s ease;
       border-radius: 20px;
+      transition: opacity 0.5s ease;
     }
   </style>
 </head>
 <body>
+  <!-- Sound effect -->
+  <audio id="switchSound" src="sounds/slide.mp3" preload="auto"></audio>
+
   <div class="container">
     <h1>Happy Birthday, Eku! 🎉🎂</h1>
     <p>Hope you have an amazing day filled with joy and surprises!</p>
@@ -111,13 +114,17 @@
     let currentIndex = 0;
     const wishBtn = document.getElementById('wishBtn');
     const wishImage = document.getElementById('wishImage');
+    const switchSound = document.getElementById('switchSound');
 
     wishBtn.addEventListener('click', () => {
       currentIndex = (currentIndex + 1) % images.length;
       wishImage.style.opacity = 0;
+
       setTimeout(() => {
         wishImage.src = images[currentIndex];
         wishImage.style.opacity = 1;
+        switchSound.currentTime = 0;
+        switchSound.play();
       }, 300);
     });
   </script>
