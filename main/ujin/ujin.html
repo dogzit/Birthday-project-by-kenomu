@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday Uujee!</title>
+  <link rel="stylesheet" href="ujin.css" />
+</head>
+<body>
+  <!-- Background music -->
+  <audio id="birthdayMusic" autoplay loop>
+    <source src="./sounds/sounds/happy-birthday.mp3" type="audio/mpeg" />
+    Your browser does not support the audio tag.
+  </audio>
+
+  <!-- Sound effect -->
+  <audio id="switchSound" src="sounds/slide.mp3" preload="auto"></audio>
+
+  <div class="container">
+    <h1>Happy Birthday, Uujee! 🎉🎂</h1>
+    <p>Happy 16th! Keep shining, you amazing volleyball queen! 👑</p>
+
+    <button class="cute-button" id="wishBtn">Next</button>
+
+    <div class="image-wrapper">
+      <img id="wishImage" src="images/main.jpeg" alt="Birthday Image" />
+    </div>
+  </div>
+
+  <script>
+    const images = [];
+    for (let i = 1; i <= 25; i++) {
+      images.push(`images/${i}.jpg`);
+    }
+
+    let currentIndex = 0;
+    const wishBtn = document.getElementById('wishBtn');
+    const wishImage = document.getElementById('wishImage');
+    const switchSound = document.getElementById('switchSound');
+
+    wishBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % images.length;
+      wishImage.style.opacity = 0;
+
+      setTimeout(() => {
+        wishImage.src = images[currentIndex];
+        wishImage.style.opacity = 1;
+        switchSound.currentTime = 0;
+        switchSound.play();
+      }, 300);
+    });
+  </script>
+</body>
+</html>

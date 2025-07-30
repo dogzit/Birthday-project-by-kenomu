@@ -1,0 +1,86 @@
+body {
+  background-image: url(./images/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #4a2c3f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(238, 156, 167, 0.5);
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #e75480;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.cute-button, .play-button {
+  width: 90%;
+  max-width: 300px;
+  padding: 16px 0;
+  font-size: 18px;
+  background: linear-gradient(135deg, #ffb6c1, #ffd1dc);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.6);
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.cute-button:hover, .play-button:hover {
+  background: linear-gradient(135deg, #ff8fab, #ffc2d1);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255, 182, 193, 0.8);
+}
+
+.cute-button:active, .play-button:active {
+  transform: scale(0.97);
+}
+
+.image-wrapper {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(238, 156, 167, 0.6);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: opacity 0.5s ease;
+}

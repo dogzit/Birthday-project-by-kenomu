@@ -12,6 +12,12 @@ const users = [
     password: "Ekubaba*123",
     page: "eku/eku.html"
   },
+  {
+    name: ["ujin", "uujee", "juujaa", "vjinxsvn_7", "anu-ujin", "anuka"],
+    dob: "2009-08-01",
+    password: "Password=vjinxsvx*123",
+    page: "ujin/ujin.html"
+  },
 ];
 
 let currentUser = null;
