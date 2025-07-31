@@ -15,7 +15,7 @@ const users = [
   {
     name: ["ujin", "uujee", "juujaa", "vjinxsvn_7", "anu-ujin", "anuka"],
     dob: "2009-08-01",
-    password: "Password=vjinxsvx*123",
+    password: "VjinX_Svn.7&bM12!",
     page: "ujin/ujin.html"
   },
 ];
@@ -43,8 +43,22 @@ function checkPassword() {
   const enteredPass = document.getElementById("password").value;
 
   if (currentUser && enteredPass === currentUser.password) {
-    window.location.href = currentUser.page;
+    document.getElementById("passwordDiv").classList.add("hidden");
+    document.getElementById("secretMessageDiv").classList.remove("hidden");
   } else {
     alert("Wrong password!");
+  }
+}
+
+function finalCheck() {
+  const msg = document.getElementById("secretMessage").value.trim().toLowerCase();
+
+  // Та хүсвэл secret мессеж бүр хэрэглэгч бүрд өөр байж болно
+  const acceptedMessages = ["zoloo is the greatest"];
+
+  if (acceptedMessages.includes(msg)) {
+    window.location.href = currentUser.page;
+  } else {
+    alert("Incorrect secret message. Try again!");
   }
 }
